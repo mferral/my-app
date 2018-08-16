@@ -29,6 +29,7 @@ $ chmod +x post-receive
 ### Editar el archivo post-recive
 ```
 #!/bin/bash
+mkdir -p /ruta/a/donde/quieres/que/tu/codigo/se/copie
 git --work-tree=/ruta/a/donde/quieres/que/tu/codigo/se/copie --git-dir=/var/repos/my-app.git checkout -f
 cd /ruta/a/donde/quieres/que/tu/codigo/se/copie
 # Borrar la imagen
