@@ -41,7 +41,7 @@ docker stop my-app
 # Borrar contenedor
 docker rm my-app
 # Arrancar contenedor
-docker run --name my-app -p "3100:80" -d my-app:latest
+docker run -dit --restart unless-stopped --name my-app -p "3100:80" -d my-app:latest
 # Limpiar fuente
 rm -Rf /ruta/a/donde/quieres/que/tu/codigo/se/copie
 ```
