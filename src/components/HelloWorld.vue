@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Hola Prros Vue y Docker ',
   props: {
     msg: String
   }
