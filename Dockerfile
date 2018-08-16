@@ -4,6 +4,7 @@ FROM node:8.11.1
 # when we change our application's nodejs dependencies:
 ADD package.json /tmp/package.json
 RUN cd /tmp && npm install
+RUN npm i -g pm2
 RUN mkdir -p /usr/src/app && cp -a /tmp/node_modules /usr/src/app
 
 # From here we load our application's code in, therefore the previous docker# "layer" thats been cached will be used if possible
@@ -17,4 +18,4 @@ RUN rm -rf ./src
 ENV PORT=80
 EXPOSE 80
 
-CMD ["npm", "start"]
+CMD ["pm2", "start"]
