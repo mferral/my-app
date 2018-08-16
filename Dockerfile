@@ -4,6 +4,7 @@ FROM node:8.11.1
 # when we change our application's nodejs dependencies:
 ADD package.json /tmp/package.json
 RUN cd /tmp && npm install
+# Instalar pm2
 RUN npm i -g pm2
 RUN mkdir -p /usr/src/app && cp -a /tmp/node_modules /usr/src/app
 
