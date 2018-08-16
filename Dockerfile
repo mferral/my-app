@@ -5,7 +5,7 @@ FROM node:8.11.1
 ADD package.json /tmp/package.json
 RUN cd /tmp && npm install
 # Instalar pm2
-RUN npm i -g pm2
+RUN npm install pm2 -g
 RUN mkdir -p /usr/src/app && cp -a /tmp/node_modules /usr/src/app
 
 # From here we load our application's code in, therefore the previous docker# "layer" thats been cached will be used if possible
@@ -19,4 +19,5 @@ RUN rm -rf ./src
 ENV PORT=80
 EXPOSE 80
 
-CMD ["pm2", "start"]
+#CMD ["pm2", "start"]
+CMD ["pm2-docker", "server.js"]
