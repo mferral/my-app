@@ -56,3 +56,6 @@ $ git symbolic-ref HEAD refs/heads/develop
 ```
 ### Subir cambios
 $ git push dev develop
+
+### Nota
+Tuve un error en el certificado de docker por que estaba mal la fecha del servidor (verificar bien la fecha)
