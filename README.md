@@ -44,6 +44,7 @@ docker rm my-app
 docker run -dit --restart unless-stopped --name my-app -p "3100:80" -d my-app:latest
 # Limpiar fuente
 rm -Rf /ruta/a/donde/quieres/que/tu/codigo/se/copie
+docker rmi $(docker images -a|grep "<none>"|awk '$1=="<none>" {print $3}')
 ```
 ### En Localhost
 ```
