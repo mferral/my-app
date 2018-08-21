@@ -20,4 +20,4 @@ ENV PORT=80
 EXPOSE 80
 
 #CMD ["pm2", "start"]
-CMD ["pm2-docker", "server.js"]
+CMD ["pm2-docker", "server.js", "--max-memory-restart","700M"]
